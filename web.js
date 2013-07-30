@@ -3,7 +3,7 @@ var app = express();
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-	buf= new Buffer(256);
+	var buf= new Buffer(256);
 	buf.write('express.readFile('index.html')');
    response.send('buf.toString');
 });
